@@ -1,0 +1,49 @@
+.container{
+    max-width: 381px;
+    margin: 10vh auto 0 auto;
+    box-shadow: 0px 0px 43px 17px lightpink;
+    background-color: rgb(226, 211, 226);
+    
+}
+body{
+    background-color: lightpink;
+}
+h1{
+    margin: 20px 40px;
+    text-align: center;
+    font-family: 'Vast Shadow';
+    
+}
+#pps{
+    text-align: right;
+    height: 70px;
+    padding: 16px 6px;
+    font-size: 24px;
+    color: rgb(28, 26, 26);
+}
+.buttons{
+    display: grid;
+   
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.button{
+   
+    font-size: 25px;
+    text-align: center;
+    cursor: pointer;
+    line-height: 50px;
+    border-radius: 24px;
+    background-color: rgba(47, 235, 18, 0.39);
+    color: white;
+}
+#equal{
+    background-color: rgb(71, 140, 143);
+    
+}
+.button:hover{
+    background-color: rgb(6, 143, 228);
+    transition: 0.5s ease-in-out;
+}
+

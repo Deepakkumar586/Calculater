@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculater</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>CALCULATER</h1>
+        <div class="container">
+            <div id="pps"></div>
+            <div class="buttons">
+                <button class="button">C</button>
+                <button class="button">/</button>
+                <button class="button">&larr;</button>
+                <button class="button">+</button>
+                <button class="button">7</button>
+                <button class="button">8</button>
+                <button class="button">9</button>
+                <button class="button">4</button>
+                <button class="button">5</button>
+                <button class="button">6</button>
+                <button class="button">1</button>
+                <button class="button">2</button>
+                <button class="button">3</button>
+                <button class="button">(</button>
+                <button class="button">0</button>
+                <button class="button">)</button>
+                <button class="button">*</button>
+                <button class="button" id="equal">=</button>
+                
+            </div>
+        </div>
+        <script>
+            let pps = document.getElementById('pps');
+            let buttons = Array.from(document.getElementsByClassName('button'));
+            buttons.map( button => {
+                button.addEventListener('click', (e) =>{
+                    switch(e.target.innerText){
+                        case 'C':
+                           
+                            pps.innerText = '';
+                            break;
+                            case '←':
+                                pps.innerText = pps.innerText.slice(0,-1);
+                                break;
+                                case '=':
+                                    try{
+                                        pps.innerText = eval(pps.innerText);
+                                    }
+                                    catch{
+                                        pps.innerText = "Error!";
+                                    }
+                                    
+                            default:
+                                pps.innerText += e.target.innerText;
+                                
+                    }
+                });
+            });
+        </script>
+    
+</body>
+</html>
